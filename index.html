@@ -5,17 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   
   <title>Frontend Mentor | Pod request access landing page</title>
 </head>
 <body>
-  Publish your podcasts everywhere.
+  <img class="brand-logo" src="/assets/desktop/logo.svg" alt="Pod brand logo">
 
-  Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
-  Apple Podcasts, Google Podcasts, Pocket Casts and more!
+  <img class="absolute bg-image-desktop" src="/assets/desktop/image-host.jpg" alt="">
+  <img class="absolute bg-dots" src="/assets/desktop/bg-pattern-dots.svg" alt="">
 
-  Request access
+  <img class="absolute bg-image-tablet" src="/assets/tablet/image-host.jpg" alt="">
+
+  <img class="absolute bg-image-mobile" src="/assets/mobile/image-host.jpg" alt="">
+  <main>
+    <h1>Publish your podcasts <br><span>everywhere.</span></h1>
+    
+    <p>Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
+    
+    <div class="form-container">
+      <form id="form" action="/" method="GET">
+        <input id="email" type="email" placeholder="Email address">
+        <button type="submit">Request Access</button>
+      </form>
+      <div id="error-message" class="error-message"></div>
+    </div>
+    
+    <div class="platform-logos">
+      <img src="/assets/desktop/spotify.svg" alt="">
+      <img src="/assets/desktop/apple-podcast.svg" alt="">
+      <img src="/assets/desktop/google-podcasts.svg" alt="">
+      <img src="/assets/desktop/pocket-casts.svg" alt="">
+    </div>
+  </main>
 </body>
 </html>
