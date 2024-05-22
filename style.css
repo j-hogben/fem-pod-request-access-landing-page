@@ -35,8 +35,8 @@
   --lh-600: 1.667;
   --lh-800: 2;
 
-  --lh-primary-heading: var(--lh-300);
-  --lh-p: var(--lh-500);
+  --lh-primary-heading: var(--lh-400);
+  --lh-p: var(--lh-600);
   --lh-form: var(--lh-800);
   --lh-error-message: var(--lh-100);
 
