@@ -1,0 +1,270 @@
+:root {
+  /* COLOURS */
+  --clr-aqua: #54e6af;
+  --clr-dark-blue: #2c344b;
+  --clr-blue-black: #121725;
+  --clr-white: #ffffff;
+  --clr-powder-blue: #5a668a;
+  --clr-light-blue: #c2cbe5;
+  --clr-error-message: #FB3E3E;
+
+  /* TYPOGRAPHY */
+  --ff-chivo: "Chivo", sans-serif;
+
+  --fs-100: .75rem; /* 12px */
+  --fs-200: .875rem; /* 14px */
+  --fs-300: .9375rem; /* 15px */
+  --fs-400: 1.125rem; /* 18px */
+  --fs-500: 1.625rem; /* 26px */
+  --fs-700: 3rem; /* 48px */
+  --fs-800: 3.25rem; /* 52px */
+
+  --fs-primary-heading: var(--fs-500);
+  --fs-p: var(--fs-300);
+  --fs-form: var(--fs-200);
+  --fs-error-message: var(--fs-100);
+
+  --fw-light: 300;
+  --fw-bold: 700;
+
+  --lh-100: 1;
+  --lh-200: 1.166;
+  --lh-300: 1.192;
+  --lh-400: 1.461;
+  --lh-500: 1.556;
+  --lh-600: 1.667;
+  --lh-800: 2;
+
+  --lh-primary-heading: var(--lh-300);
+  --lh-p: var(--lh-500);
+  --lh-form: var(--lh-800);
+  --lh-error-message: var(--lh-100);
+
+  /* BUTTONS */
+  --br-button: 1.75rem;
+}
+
+@media (min-width: 45em) {
+  :root {
+    --fs-primary-heading: var(--fs-700);
+    --fs-p: var(--fs-400);
+
+    --lh-primary-heading: var(--lh-200);
+    --lh-p: var(--lh-500);
+  }
+}
+
+@media (min-width: 70em) {
+  :root {
+    --fs-primary-heading: var(--fs-800);
+
+    --lh-primary-heading: var(--lh-300);
+  }
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Body height */
+html, 
+body {
+  height: 100%;
+}
+
+/* Make images easier to work with */
+img,
+picture, 
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, 
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* GENERAL STYLING */
+body {
+  font-family: var(--ff-chivo);
+  font-weight: var(--fw-light);
+  position: relative;
+}
+
+/* BACKGROUNDS */
+.bg-image-mobile, 
+.bg-image-tablet, 
+.bg-image-desktop, 
+.bg-dots {
+  display: none;
+}
+
+.absolute {
+  position: absolute;
+}
+
+/* TYPOGRAPHY */
+.primary-heading {
+  font-size: var(--fs-primary-heading);
+  line-height: var(--lh-primary-heading);
+  text-transform: uppercase;
+  color: var(--clr-aqua);
+}
+
+.primary-heading span {
+  color: var(--clr-white);
+}
+
+p {
+  font-size: var(--fs-p);
+  line-height: var(--lh-p);
+  color: var(--clr-light-blue);
+}
+
+form {
+  font-size: var(--fs-form);
+  line-height: var(--lh-form);
+  font-weight: var(--fw-bold);
+}
+
+.error-message {
+  font-size: var(--fs-error-message);
+  line-height: var(--lh-error-message);
+  font-weight: var(--fw-bold);
+  color: var(--clr-error-message);
+  bottom: calc((var(--fs-error-message) + .5rem) * -1);
+  left: 2rem;
+}
+
+/* BUTTON STYLING */
+.form-container {
+  position: relative;
+}
+
+.form-input {
+  border: none;
+  border-radius: var(--br-button);
+}
+
+.email-input {
+  padding: .875rem 2rem;
+  background-color: var(--clr-dark-blue);
+  color: var(--clr-white);
+  outline: none;
+}
+
+.submit-button {
+  padding: .5625rem 1.6875rem;
+  background-color: var(--clr-aqua);
+}
+
+/* PLATFORM LOGOS STYLING */
+.platform-logos {
+  display: flex;
+  width: 100%;
+  align-items: center;
+
+  img {
+    min-width: 0;
+  }
+
+  .apple {
+    margin-left: 1.4375rem;
+  }
+
+  .google {
+    margin-left: 1.5625rem;
+  }
+
+  .pocket {
+    margin-left: 1rem;
+  }
+}
+
+/* MOBILE MAIN */
+@media (max-width: 30em) {
+  body::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(/assets/mobile/image-host.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    opacity: .075;
+  }
+
+  body::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--clr-blue-black);
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
+
+  body {
+    padding: 3.875rem 1.5rem 5.875rem;
+    text-align: center;
+  }
+
+  .brand-logo {
+    margin-inline: auto;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .primary-heading {
+    margin-top: 3.5625rem;
+  }
+
+  p {
+    margin-top: 1rem;
+  }
+
+  .platform-logos {
+    margin-top: 2.0625rem;
+  }
+
+  .form-container {
+    order: 1;
+    margin-top: 3rem;
+  }
+    
+  .email-input, 
+  .submit-button {
+    width: 100%;
+    padding: .5625rem 2rem;
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+}
