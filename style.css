@@ -113,6 +113,11 @@ body {
   display: none;
 }
 
+.bg-image-tablet, 
+.bg-image-desktop {
+  z-index: -1;
+}
+
 .absolute {
   position: absolute;
 }
@@ -124,14 +129,31 @@ body {
   }
 
   .bg-image-tablet {
-    z-index: -1;
     top: 0;
     right: 0;
   }
 
   .bg-dots {
-    bottom: 0;
+    bottom: 4.875rem;
     left: 1.875rem;
+  }
+}
+
+@media (width > 70em) {
+  .bg-image-tablet {
+    display: none;
+  }
+
+  .bg-image-desktop {
+    display: block;
+    right: 0;
+    top: 8.125rem;
+  }
+
+  .bg-dots {
+    bottom: 4.875rem;
+    left: auto;
+    right: 0;
   }
 }
 
@@ -223,9 +245,25 @@ form {
   }
 }
 
+@media (width > 70em) {
+  .platform-logos {
+
+    .apple {
+      margin-left: 2.5rem;
+    }
+    
+    .google {
+      margin-left: 2.5625rem;
+    }
+    
+    .pocket {
+      margin-left: 1.6875rem;
+    }
+  }
+}
+
 /* MAIN STYLING */
 @media (width > 45em) {
-
   body {
     background-color: var(--clr-blue-black);
     padding: 3.125rem 2.4375rem 16.0625rem;
@@ -265,6 +303,22 @@ form {
 
     .platform-logos {
       margin-top: 4rem;
+    }
+  }
+}
+
+@media (width > 70em) {
+  body {
+    padding: 6.375rem 10.3125rem 8.125rem;
+  }
+
+  main {
+    max-width: 45.1875rem;
+    margin-top: 6.4375rem;
+    padding-top: 5.5rem;
+    
+    p {
+      margin-top: 1.5rem;
     }
   }
 }
